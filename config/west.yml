@@ -13,11 +13,17 @@ manifest:
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
+      # kyek / duckyb
+    - name: duckyb
+      url-base: https://github.com/duckyb
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
+    - name: urchin-zmk-module
+      remote: duckyb
+      revision: main
     - name: nice-view-gem
       remote: m165437
       revision: main
