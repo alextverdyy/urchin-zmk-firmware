@@ -161,7 +161,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LT1 LM1>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM>;
             bindings = <&kp LPAR>;
         };
 
@@ -169,7 +169,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <RT1 RM1>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM>;
             bindings = <&kp RPAR>;
         };
 
@@ -177,7 +177,7 @@
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LT2 LM2>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM >;
             bindings = <&kp LBKT>;
         };
 
@@ -185,7 +185,7 @@
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <RT2 RM2>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM>;
             bindings = <&kp RBKT>;
         };
 
@@ -193,7 +193,7 @@
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LT3 LM3>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM>;
             bindings = <&kp LBRC>;
         };
 
@@ -201,7 +201,7 @@
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <RT3 RM3>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM>;
             bindings = <&kp RBRC>;
         };
 
@@ -209,15 +209,15 @@
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LM1 LB1>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM>;
             bindings = <&kp LT>;
         };
 
-        combo_bracket_v_angled_r {
+        combo_bracket_v_anled_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <RM1 RB1>;
-            layers = <BASE  SYM NUM >;
+            layers = <BASE SYM NUM>;
             bindings = <&kp GT>;
         };
 
@@ -225,7 +225,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LH2 LH1 LH0>;
-            layers = <BASE  NAV NUM SYM>;
+            layers = <BASE NAV NUM SYM>;
             bindings = <&kp RET>;
         };
 
@@ -233,7 +233,7 @@
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
             key-positions = <LH1 LH0>;
-            layers = <BASE  NAV NUM SYM>;
+            layers = <BASE NAV NUM SYM>;
             bindings = <&kp BSPC>;
         };
 
