@@ -31,6 +31,7 @@
 #define SYM2 4
 #define ACCENT 5
 #define SETTINGS 6
+#define NUM 7
 // -----------------
 
 &sk {
@@ -164,7 +165,13 @@
 			layers = <BASE>;
 		};
 	};
-
+	conditional_layers {
+		compatible = "zmk,conditional-layers";
+		func_layer {
+		    if-layers = <SYM NUM>;
+		    then-layer = <FNC>;
+		};
+	    };
 	keymap {
 		compatible = "zmk,keymap";
 		// Base alpha layer
@@ -243,5 +250,16 @@
 										&none &none                         &none &none 
 				>;
 		};
+
+					num_layer {
+			label = "Num";
+			bindings = <
+			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
+			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp IT_OGRV
+			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp IT_UGRV
+							&mo EXT &qt LSHIFT SPACE           &kp SPACE &sl SYM
+			>;
+		};
+
 	};
 };
