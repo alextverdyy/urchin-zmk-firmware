@@ -123,6 +123,13 @@
             quick-tap-ms = <200>;
         };
 
+	swapper_cmd_tab: swapper {
+                compatible = "zmk,behavior-tri-state";
+                #binding-cells = <0>;
+                bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+                //  ignored-key-positions = <x>;
+    	};
+
 	};
 
 	macros {
