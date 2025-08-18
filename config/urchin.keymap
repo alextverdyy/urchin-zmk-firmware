@@ -307,6 +307,11 @@
             bindings = <&kp LG(LC(LS(NUMBER_4)))>;
             key-positions = <12 22>;
         };
+
+        tmux {
+            bindings = <&kp LC(S)>;
+            key-positions = <10 11>;
+        };
     };
 
     conditional_layers {
