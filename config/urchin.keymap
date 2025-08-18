@@ -128,6 +128,34 @@
 
             //  ignored-key-positions = <x>;
         };
+
+            lt_l: layer_tap_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+			quick-tap-ms = <200>;
+
+            // Activate layer function immediately if a key on the right
+            // side of the keyboard is used.
+            hold-trigger-key-positions = <KEYS_R>;
+
+            bindings = <&mo>, <&kp>;
+        };
+
+        lt_r: layer_tap_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+			quick-tap-ms = <200>;
+
+            // Activate layer function immediately if a key on the left
+            // side of the keyboard is used.
+            hold-trigger-key-positions = <KEYS_L>;
+
+            bindings = <&mo>, <&kp>;
+        };
     };
 
     macros {
@@ -160,7 +188,7 @@
         combo_bracket_v_round_l {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT1 LM1 3 13>;
+            key-positions = <3 13>;
             layers = <BASE SYM NUM>;
             bindings = <&kp LPAR>;
         };
@@ -168,7 +196,7 @@
         combo_bracket_v_round_r {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT1 RM1 6 16>;
+            key-positions = <6 16>;
             layers = <BASE SYM NUM>;
             bindings = <&kp RPAR>;
         };
@@ -176,7 +204,7 @@
         combo_bracket_v_square_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT2 LM2 2 12>;
+            key-positions = <2 12>;
             layers = <BASE SYM NUM >;
             bindings = <&kp LBKT>;
         };
@@ -184,7 +212,7 @@
         combo_bracket_v_square_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT2 RM2 7 17>;
+            key-positions = <7 17>;
             layers = <BASE SYM NUM>;
             bindings = <&kp RBKT>;
         };
@@ -192,7 +220,7 @@
         combo_bracket_v_curly_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT3 LM3 1 11>;
+            key-positions = <1 11>;
             layers = <BASE SYM NUM>;
             bindings = <&kp LBRC>;
         };
@@ -200,7 +228,7 @@
         combo_bracket_v_curly_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT3 RM3 8 18>;
+            key-positions = <8 18>;
             layers = <BASE SYM NUM>;
             bindings = <&kp RBRC>;
         };
@@ -208,7 +236,7 @@
         combo_bracket_v_angled_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM1 LB1 13 23>;
+            key-positions = <13 23>;
             layers = <BASE SYM NUM>;
             bindings = <&kp LT>;
         };
@@ -216,7 +244,7 @@
         combo_bracket_v_anled_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM1 RB1 16 26>;
+            key-positions = <16 26>;
             layers = <BASE SYM NUM>;
             bindings = <&kp GT>;
         };
@@ -224,7 +252,7 @@
         combo_bspc {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LH1 LH0 30 31>;
+            key-positions = <30 31>;
             layers = <BASE NAV NUM SYM>;
             bindings = <&kp BSPC>;
         };
@@ -232,14 +260,14 @@
         combo_grave {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM3 RM4 18 19>;
+            key-positions = <18 19>;
             bindings = <&kp GRAVE>;
         };
 
         combo_md_code_block {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM2 RM3 RM4 17 18 19>;
+            key-positions = <17 18 19>;
             bindings = <&m_type_md_code_block>;
         };
 
