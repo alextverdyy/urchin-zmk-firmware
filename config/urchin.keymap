@@ -160,7 +160,7 @@
         combo_bracket_v_round_l {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT1 LM1>;
+            key-positions = <LT1 LM1 3 13>;
             layers = <BASE SYM NUM>;
             bindings = <&kp LPAR>;
         };
@@ -168,7 +168,7 @@
         combo_bracket_v_round_r {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT1 RM1>;
+            key-positions = <RT1 RM1 6 16>;
             layers = <BASE SYM NUM>;
             bindings = <&kp RPAR>;
         };
@@ -176,7 +176,7 @@
         combo_bracket_v_square_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT2 LM2>;
+            key-positions = <LT2 LM2 2 12>;
             layers = <BASE SYM NUM >;
             bindings = <&kp LBKT>;
         };
@@ -184,7 +184,7 @@
         combo_bracket_v_square_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT2 RM2>;
+            key-positions = <RT2 RM2 7 17>;
             layers = <BASE SYM NUM>;
             bindings = <&kp RBKT>;
         };
@@ -192,7 +192,7 @@
         combo_bracket_v_curly_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LT3 LM3>;
+            key-positions = <LT3 LM3 1 11>;
             layers = <BASE SYM NUM>;
             bindings = <&kp LBRC>;
         };
@@ -200,7 +200,7 @@
         combo_bracket_v_curly_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RT3 RM3>;
+            key-positions = <RT3 RM3 8 18>;
             layers = <BASE SYM NUM>;
             bindings = <&kp RBRC>;
         };
@@ -208,7 +208,7 @@
         combo_bracket_v_angled_l {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LM1 LB1>;
+            key-positions = <LM1 LB1 13 23>;
             layers = <BASE SYM NUM>;
             bindings = <&kp LT>;
         };
@@ -216,7 +216,7 @@
         combo_bracket_v_anled_r {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM1 RB1>;
+            key-positions = <RM1 RB1 16 26>;
             layers = <BASE SYM NUM>;
             bindings = <&kp GT>;
         };
@@ -224,7 +224,7 @@
         combo_bspc {
             timeout-ms = <COMBO_TERM_FAST>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <LH1 LH0>;
+            key-positions = <LH1 LH0 30 31>;
             layers = <BASE NAV NUM SYM>;
             bindings = <&kp BSPC>;
         };
@@ -232,46 +232,52 @@
         combo_grave {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM3 RM4>;
+            key-positions = <RM3 RM4 18 19>;
             bindings = <&kp GRAVE>;
         };
 
         combo_md_code_block {
             timeout-ms = <COMBO_TERM_SLOW>;
             require-prior-idle-ms = <COMBO_PRIOR_IDLE>;
-            key-positions = <RM2 RM3 RM4>;
+            key-positions = <RM2 RM3 RM4 17 18 19>;
             bindings = <&m_type_md_code_block>;
         };
 
         // internal-left & external-right thumb keys
-
-        combo_sym2 {
-            timeout-ms = <200>;
-            key-positions = <31 33>;
-            bindings = <&mo 0>;
-        };
-
         // both left thumb keys
-
-        combo_settings {
-            timeout-ms = <200>;
-            key-positions = <30 31>;
-            bindings = <&mo 5>;
-        };
-
         // left index & middle fingers (home-row)
         // hold control & space for Adobe workflow
 
-        combo_ctrl_space {
+        combo_gui_space {
             timeout-ms = <200>;
             key-positions = <12 13>;
-            bindings = <&kp LC(SPACE)>;
+            bindings = <&kp LG(SPACE)>;
             layers = <0>;
         };
 
-        Tab {
-            bindings = <&kp TAB>;
-            key-positions = <32 33>;
+        Esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <16 17>;
+        };
+
+        Copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <21 22>;
+        };
+
+        Paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <22 23>;
+        };
+
+        Cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <23 21>;
+        };
+
+        Scrc {
+            bindings = <&kp LG(LC(LS(NUMBER_4)))>;
+            key-positions = <12 22>;
         };
     };
 
@@ -292,10 +298,10 @@
         default_layer {
             label = "Base";
             bindings = <
-&kp Q          &kp W             &kp E             &kp R               &kp T        &kp Y        &kp U                &kp I              &kp O              &kp P
-&hm_l RCTRL A  &hm_l LEFT_ALT S  &hm_l LEFT_GUI D  &hm_l LEFT_SHIFT F  &kp G        &kp H        &hm_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K  &hm_r RIGHT_ALT L  &hm_r RCTRL SEMI
-&kp Z          &kp X             &kp C             &kp V               &kp B        &kp N        &kp M                &kp COMMA          &kp DOT            &kp SLASH
-                                                   &lt 1 ESCAPE        &lt 2 SPACE  &lt 4 ENTER  &lt 5 BACKSPACE
+&kp Q          &kp W             &kp E             &kp R                     &kp T        &kp Y        &kp U                      &kp I              &kp O              &kp P
+&hm_l RCTRL A  &hm_l LEFT_ALT S  &hm_l LEFT_GUI D  &hm_shift_l LEFT_SHIFT F  &kp G        &kp H        &hm_shift_r RIGHT_SHIFT J  &hm_r RIGHT_GUI K  &hm_r RIGHT_ALT L  &hm_r RCTRL SEMI
+&kp Z          &kp X             &kp C             &kp V                     &kp B        &kp N        &kp M                      &kp COMMA          &kp DOT            &kp SLASH
+                                                   &lt 1 TAB                 &lt 2 SPACE  &lt 4 ENTER  &lt 5 BACKSPACE
             >;
         };
 
